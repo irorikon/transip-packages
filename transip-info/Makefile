@@ -8,19 +8,19 @@ include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/kernel.mk
 include ./version.mk
 
-PKG_NAME:=transip-sdk-info
+PKG_NAME:=transip-sdk-hw-info
 PKG_VERSION:=$(strip $(call findrev))
 PKG_RELEASE:=1
 
 include $(INCLUDE_DIR)/package.mk
 
-define KernelPackage/transip-sdk-info
+define KernelPackage/transip-sdk-hw-info
   CATEGORY:=transip-sdk
   SUBMENU:=Kernel modules
   TITLE:=TransIP hardware information
-  FILES:=$(PKG_BUILD_DIR)/transip-sdk-info.ko
+  FILES:=$(PKG_BUILD_DIR)/transip-sdk-hw-info.ko
   DEPENDS:=+uboot-envtools
-  AUTOLOAD:=$(call AutoLoad,01,transip-sdk-info,1)
+  AUTOLOAD:=$(call AutoLoad,01,transip-sdk-hw-info,1)
   KCONFIG:=
 endef
 
@@ -43,9 +43,9 @@ define Build/Compile
 		modules
 endef
 
-define KernelPackage/transip-sdk-info/install
+define KernelPackage/transip-sdk-hw-info/install
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
 	$(INSTALL_DATA) ./files/transip-hw-env.default $(1)/etc/uci-defaults/00-transip-hw-env
 endef
 
-$(eval $(call KernelPackage,transip-sdk-info))
+$(eval $(call KernelPackage,transip-sdk-hw-info))

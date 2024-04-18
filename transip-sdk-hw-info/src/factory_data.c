@@ -9,7 +9,7 @@
 #include <linux/version.h>
 #include <linux/pagemap.h>
 
-#include "transip-info.h"
+#include "transip-hw-info.h"
 
 static int block_part_read(const char *part, unsigned int from,
                   void *val, size_t bytes)

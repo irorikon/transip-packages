@@ -6,7 +6,8 @@
 #include <linux/of_platform.h>
 #include <linux/etherdevice.h>
 #include <linux/mtd/mtd.h>
-#include "transip-info.h"
+
+#include "transip-hw-info.h"
 
 struct transip_hw_info transip_info = {};
 

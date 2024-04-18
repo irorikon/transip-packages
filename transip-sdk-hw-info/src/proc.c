@@ -1,7 +1,7 @@
 /*
  * @Author: iRorikon
  * @Date: 2024-04-18 22:58:30
- * @FilePath: \transip-packages\transip-info\src\proc.c
+ * @FilePath: \transip-packages\transip-sdk-hw-info\src\proc.c
  */
 #include <linux/module.h>
 #include <linux/device.h>
@@ -10,7 +10,8 @@
 #include <linux/uaccess.h>
 #include <linux/seq_file.h>
 #include <linux/version.h>
-#include "transip-info.h"
+
+#include "transip-hw-info.h"
 
 static int proc_show(struct seq_file *s, void *v)
 {

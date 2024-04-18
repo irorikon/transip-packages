@@ -65,7 +65,7 @@ static struct platform_driver transip_info_driver = {
     .probe		= transip_info_probe,
     .remove		= transip_info_remove,
     .driver = {
-        .name	= transip_info_DRV_NAME,
+        .name	= TEANSIP_INFO_DRV_NAME,
         .of_match_table = transip_info_match,
     }
 };

@@ -1,6 +1,6 @@
 CFG=/etc/fw_env_transip.config
 
-[ -f /proc/transip-info/cfg-partition ] && dev=$(cat /proc/transip-info/cfg-partition)
+[ -f /proc/transip-hw-info/cfg-partition ] && dev=$(cat /proc/transip-hw-info/cfg-partition)
 
 [ -n "$dev" -a -e $dev ] || exit 0
 
